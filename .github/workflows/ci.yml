@@ -26,7 +26,7 @@ jobs:
 
       # Step 4: Run tests
       - name: Run Tests
-        run: pytest week\ 3/
+        run: pytest "week 3 Task/"
 
       # Step 5: Login to Docker Hub
       - name: Login to Docker Hub
@@ -34,7 +34,7 @@ jobs:
 
       # Step 6: Build Docker Image
       - name: Build Docker Image
-        run: docker build -t sufyanali1307/week3-app:${{ github.sha }} ./week\ 3
+        run: docker build -t sufyanali1307/week3-app:${{ github.sha }} "week 3 Task"
 
       # Step 7: Push Docker Image
       - name: Push Docker Image
