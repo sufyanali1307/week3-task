@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        button {
+            background: #764ba2;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="emoji">🚀</div>
+        <h1>Deployment Successful!</h1>
+        <p><strong>Congratulations!</strong> Your static website is now live on GitHub Pages.</p>
+        <p>This project was deployed as part of the Mini Deployment assignment.</p>
+        
+        <button onclick="showMessage()">Click Me!</button>
+        
+        <div class="badge">
+            📅 Deployed: <span id="date"></span>
+        </div>
+        
+        <div class="footer">
+            <p>GitHub Pages Deployment | Static HTML/CSS/JS</p>
+        </div>
+    </div>
+
+    <script>
+        // Display current date
+        const dateElement = document.getElementById('date');
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = new Date().toLocaleDateString('en-US', options);
+
+        // Button click function
+        function showMessage() {
+            alert('🎉 Your static website is working perfectly! Great job!');
+        }
+
+        // Console log for debugging
+        console.log('Website loaded successfully on:', new Date().toLocaleString());
+    </script>
+</body>
+</html>
