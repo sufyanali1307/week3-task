@@ -31,4 +31,4 @@ jobs:
         run: docker build -t sufyanali1307/week3-app:${{ github.sha }} .
 
       - name: Push Image
-        run: docker push YOUR_USERNAME/week3-app:${{ github.sha }}
+        run: docker push sufyanali1307/week3-app:${{ github.sha }}
